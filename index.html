@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Budget App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+      <h2> BUDGET APP </h2>
+  </header>
+  <main class="content">
+    <section class = "budget-dashboard ">
+      <section class="form-container card">
+          <form action="#">
+              <div class="input-container">
+                <label for="amount">AMOUNT</label><br>
+                <input type="number" id="amount" name="amount" placeholder="Add your Amount" required/> 
+              </div>
+              <div class="input-container"> 
+                <label for="description">DESCRIPTION</label>
+                <input type="text" id="description" name="description" placeholder="Add Description" required/>
+              </div>
+              <div class="button-container">
+                <button type="submit" id="amount-credit" > + </button>
+                <button type="submit" id="amount-debit" > - </button>
+              </div>
+          </form>
+      </section>
+      <section class="budget-info card">
+        <h4>
+          Remaining Amount: <span id="rem-amount">0</span>  
+          <span id="rem-percentage" class="rem-percentage"></span>
+        </h4>
+        <h4>
+          Expenses: <span id="expense-amount">0</span>  
+          <span id="expense-percentage" class="expense-percentage"></span>
+        </h4>
+        <h4 id="message"></h4>
+      </section>
+    </section>
+    <section class="budget-info-list" id="budget-info-list">    
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

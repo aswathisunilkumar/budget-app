@@ -1,0 +1,103 @@
+*{
+    box-sizing:border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+:root {
+    --background:rgba(243,129,129,1);
+}
+
+body {
+  background-color: rgba(234,255,208,1);
+}
+
+header {
+    display: flex;
+    background-color: var(--background);
+    justify-content: center;
+    align-items: center;
+}
+
+.card, .expense-item {
+
+  background-color: white;
+  box-shadow: 8px 3px 12px 6px rgba(136, 136, 136, 0.5);
+  
+}
+
+.budget-dashboard {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    column-gap: 50px; 
+    padding: 25px 25px;
+}
+
+.form-container, .budget-info {
+    padding: 15%;
+}
+
+.form-container form {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.button-container button {
+  width: 30%;
+  height: 75%;
+  font-size: 2em;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 7px rgb(221, 217, 217);
+}
+.button-container button:hover {
+  background-color:rgba(149,225,211,1);
+}
+.button-container button:active {
+  background-color:rgba(149,225,211,1);
+  box-shadow: 0 2px rgb(194, 194, 194);
+  transform: translateY(4px);
+  }
+
+.rem-percentage {
+  color: rgb(146, 214, 45);
+}
+
+.expense-percentage {
+  color: red;
+}
+
+.budget-info-list{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    column-gap: 50px;
+    row-gap: 50px;
+    padding: 25px 25px;
+}
+
+.expense-item {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding: 50px;
+  animation: cardSlide 50ms ease-in-out;
+}
+
+@keyframes cardSlide {
+  from { width:0%; }
+  to { width: 100%;}
+}
